@@ -17,10 +17,11 @@ function CountryList({ cities, isLoading }) {
     else return arr;
   }, []);
 
+  console.log(countries[0]);
   return (
     <ul className={styles.countryList}>
       {countries.map((country) => (
-        <CountryItem country={country} key={country} />
+        <CountryItem country={country} key={country.country} />
       ))}
     </ul>
   );
